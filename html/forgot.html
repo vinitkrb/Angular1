@@ -1,0 +1,9 @@
+<br/><br/>
+<form name="myForm">
+<h1>Forgot Your Password?</h1>
+{{message}}
+<br/><br/>
+<center>Email:<input type="text" name="email" placeholder="Email address"  ng-model="email" ng-required="true" ></center><br/><br/>
+<center><button ng-click="myForm.$valid && submit()" class="btn btn-info" >Submit</button></center>
+</form>
+

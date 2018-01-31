@@ -1,0 +1,84 @@
+<div>
+<center><table >
+<p><input type="text" placeholder="Search by Name & Technology" ng-model="searchText"/></p>
+
+<thead>
+
+
+<tr>
+	<th ng-click="sortData('firstName')" ng-hide="hideFirstName">
+	FirstName<input type="checkbox" ng-model="hideFirstName"/>
+	<div ng-class="getSortClass('firstName')">
+	</div>
+	</th>
+
+	<th ng-click="sortData('lastName')" ng-hide="hideLastName">
+	LastName<input type="checkbox" ng-model="hideLastName"/>
+	<div ng-class="getSortClass('lastName')">
+	</div>
+	</th>
+
+	<th ng-click="sortData('technology')" ng-hide="hideTechnology">
+	Technology<input type="checkbox" ng-model="hideTechnology"/>
+	<div ng-class="getSortClass('technology')">
+	</div>
+	</th>
+
+
+	<th ng-click="sortData('gender')" ng-hide="hideGender">
+	Gender<input type="checkbox" ng-model="hideGender"/>
+	<div ng-class="getSortClass('gender')">
+	</div>
+	</th>
+
+
+	<th ng-click="sortData('dateOfBirth')" ng-hide="hideDob">
+	DateOfBirth<input type="checkbox" ng-model="hideDob"/>
+    <div ng-class="getSortClass('dateOfBirth')">
+	</div>
+	</th>
+
+<!-- ng-show can be used in place of ng-hide with negative value e.g ng-show="-hideSalary" -->
+	<th ng-click="sortData('salary')" ng-hide="hideSalary">   
+	
+	Salary<input type="checkbox" ng-model="hideSalary"/>
+	<div ng-class="getSortClass('salary')">
+	</div>
+	</th>
+
+
+	<th ng-click="sortData('city')" ng-hide="hideCity">
+	City<input type="checkbox" ng-model="hideCity"/>
+	<div ng-class="getSortClass('city')">
+	</div>
+	</th>
+	
+</tr>
+
+
+</thead>
+
+
+<tbody>
+
+
+	<tr ng-repeat= "employee in employees |orderBy: sortColumn:reverseSort | filter:search">
+
+
+	<td ng-hide="hideFirstName"> {{employee.firstName|uppercase}}        </td>
+	<td ng-hide="hideLastName">  {{employee.lastName|uppercase}}         </td>
+	<td ng-hide="hideTechnology">{{employee.technology|uppercase}}       </td>
+	<td ng-hide="hideGender">    {{employee.gender|gender}}              </td>
+	<td ng-hide="hideDob">       {{employee.dateOfBirth |date:"dd/MM/yyyy"}}    </td>
+	<td ng-hide="hideSalary">    {{employee.salary|number:2}}            </td>
+	<td ng-hide="hideCity">      {{employee.city|uppercase}}             </td>
+	
+	</tr>
+
+
+</tbody>
+
+
+</table>
+</center>
+</div>
