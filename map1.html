@@ -47,24 +47,28 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-  --><style type="text/css">
-        html, body, #map_canvas {
-            height: 100%;
-            width: 100%;
-            margin: 0px;
-        }
+  -->
+<style type="text/css">
+html,
+body,
+#map_canvas {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
 
-        #map_canvas {
-            position: relative;
-        }
+#map_canvas {
+    position: relative;
+}
 
-        .angular-google-map-container {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-        }
-    </style><div id="map_canvas" ng-controller="mainCtrl">
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+</style>
+<div id="map_canvas" ng-controller="mainCtrl">
     <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
 </div>
