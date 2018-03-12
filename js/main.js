@@ -1,6 +1,5 @@
 var mainApp = angular.module("mainApp", ['ngRoute']);
 mainApp.config(function($routeProvider) {
-
     $routeProvider
         .when('/home', {
             templateUrl: 'html/home.html',
@@ -200,6 +199,7 @@ mainApp.controller('aboutController', function($scope) {
 mainApp.controller('contactController', function($scope) {});
 mainApp.controller("myController", function($scope) {
     //employee list in an array.
+    $scope.dropdown = ["Name", "Email", "Address"];
     var employees = [
         { firstName: "Vinit", lastName: "Kumar", technology: "JAVA", gender: 1, dateOfBirth: new Date("May 11,1995"), salary: "350000", city: "Bihar" },
         { firstName: "Sai", lastName: "Janani", technology: "AngularJS", gender: 2, dateOfBirth: new Date("AUG 22,1994"), salary: "340000", city: "Chennai" },

@@ -1,9 +1,14 @@
 <div>
     <center>
         <table>
-            <p>
-                <input type="text" placeholder="Search by Name & Technology" ng-model="searchText" />
-            </p>
+                    <p>
+                        <input type="text" placeholder="Search by Name & Technology" ng-model="searchText" />
+                    </p>
+                <!-- <div class="col-md-3">
+                    <select class="" ng-model="selectedName" ng-options="item for item in dropdown">
+                        <option value="" disabled selected hidden>Choose a value</option>
+                    </select>
+                </div> -->
             <thead>
                 <tr>
                     <th ng-click="sortData('firstName')" ng-hide="hideFirstName">
